@@ -1,1 +1,22 @@
+No changes were made from part I only added new stuff.
+I had javascript from part 1.
 
+This is a list of stuff i added for part 3
+Interactive elements (tabs, accordion, lightbox gallery, animated counters)
+Leaflet interactive map
+Dynamic content loading with search/filter
+Full SEO setup (meta tags, structured data, robots.txt, sitemap.xml example)
+Fast, secure, mobile-first code
+Two fully functional and validated forms (enquiry.html + contact.html) with:HTML5 + JavaScript validation
+AJAX submission (using Fetch API)
+For contact.html → opens user’s email client with pre-filled email + fallback AJAX to Formspree/example endpoint
+js/script.js – Fully functional  Pet filter (All / Dog / Cat) on adopt.html  
+Form validation + success pop-ups (all 3 forms)  
+Prevent default submission + friendly messages
+
+Minor final enhancements (optional but recommended):Add 6–8 more pet cards (dogs + cats) with proper data-type
+Replace <div id="map-placeholder"> with real Google Maps embed
+
+
+A huge part of making this possible was the addition of a robot.txt and Sitemap.xml file in my POE project.
+All Was done on 17th of Novemeber
