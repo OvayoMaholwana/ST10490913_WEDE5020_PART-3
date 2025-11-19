@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Adopt a rescued dog or cat in Uitenhage. View all available pets and apply today.">
+    <meta name="keywords" content="adopt pet Uitenhage, rescue dog, rescue cat, adopt animal Eastern Cape">
+    <title>Paws for a Cause - Adopt a Pet</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aptos&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adopt.html" aria-current="page">Adopt a Pet</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="fade-in">
+            <h1>Adopt a Pet</h1>
+            <p>Give a rescued animal a second chance at a loving home. All pets are vaccinated, dewormed, and spayed/neutered.</p>
+
+            <!-- Search + Filter Bar -->
+            <div style="text-align: center; margin: 2rem 0;">
+                <input type="text" id="pet-search" placeholder="Search by name (e.g. Buddy, Luna)" style="padding: 0.7rem; width: 300px; max-width: 90%;">
+                
+                <select id="pet-type" style="padding: 0.7rem; margin-left: 1rem;">
+                    <option value="all">All Pets</option>
+                    <option value="dog">Dogs Only</option>
+                    <option value="cat">Cats Only</option>
+                </select>
+            </div>
+
+            <!-- Pet Gallery -->
+            <div class="pet-gallery">
+                <div class="pet-card" data-type="dog">
+                    <img src="images/Dog 1.jpg" alt="Buddy - Friendly Labrador ready for adoption">
+                    <h3>Buddy</h3>
+                    <p>2-year-old Labrador • Super friendly • Loves kids</p>
+                </div>
+                <div class="pet-card" data-type="cat">
+                    <img src="images/Cat 1.jpg" alt="Whiskers - Cuddly tabby cat">
+                    <h3>Whiskers</h3>
+                    <p>1-year-old tabby • Lap cat • Very affectionate</p>
+                </div>
+                <div class="pet-card" data-type="dog">
+                    <img src="images/Dog 2.jpg" alt="Max - Golden Retriever">
+                    <h3>Max</h3>
+                    <p>3yo Golden Retriever • Great with families</p>
+                </div>
+                <div class="pet-card" data-type="cat">
+                    <img src="images/Cat 2.jpg" alt="Luna - Playful kitten">
+                    <h3>Luna</h3>
+                    <p>8-month-old kitten • Playful & curious</p>
+                </div>
+                <!-- Add more pets as needed -->
+            </div>
+
+            <h2 style="margin-top: 3rem;">Adoption Application</h2>
+            <form id="adoption-form">
+                <label for="app-name">Your Name *</label>
+                <input type="text" id="app-name" name="name" required>
+
+                <label for="app-email">Email *</label>
+                <input type="email" id="app-email" name="email" required>
+
+                <label for="pet-interest">Which pet are you interested in? *</label>
+                <input type="text" id="pet-interest" name="pet" placeholder="e.g. Buddy, Luna" required>
+
+                <label for="app-message">Tell us about your home & experience</label>
+                <textarea id="app-message" name="message" rows="5"></textarea>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Enlarged pet photo">
+    </div>
+
+    <footer>
+        <p>© 2025 Paws for a Cause. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>

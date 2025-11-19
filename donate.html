@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding to UTF-8 for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Ensure responsive design for various screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page title for the donation page -->
+    <title>Paws for a Cause - Donate</title>
+    <!-- Link to external CSS for consistent styling across the site -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Import Aptos font from Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Aptos&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section containing navigation -->
+    <header>
+        <!-- Navigation menu for site-wide links -->
+        <nav>
+            <ul>
+                <!-- Navigation links to main pages -->
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt a Pet</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main content of the donation page -->
+    <main>
+        <!-- Section for donation information and form -->
+        <section>
+            <!-- Main heading for the donation page -->
+            <h1>Donate</h1>
+            <!-- Brief description of how donations are used -->
+            <p>Your donations help provide shelter, medical care, and food for our animals.</p>
+            <!-- Donation form to collect user input -->
+            <form id="donation-form">
+                <!-- Input for donation amount in South African Rand (ZAR) -->
+                <label for="amount">Donation Amount (ZAR):</label>
+                <input type="number" id="amount" min="10" required>
+                <!-- Input for donor's name -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                <!-- Input for donor's email address -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <!-- Submit button to process the donation -->
+                <button type="submit">Donate Now</button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer with copyright information -->
+    <footer>
+        <p>&copy; 2025 Paws for a Cause. All rights reserved.</p>
+    </footer>
+    <!-- External JavaScript file for additional functionality (e.g., form submission, filter on adopt.html) -->
+    <script src="js/script.js"></script>
+</body>
+</html>

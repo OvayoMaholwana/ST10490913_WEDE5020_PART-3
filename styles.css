@@ -1,0 +1,246 @@
+/* ================================
+   1. Base Style & CSS Reset
+   ================================ */
+
+/* I Reset default browser styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Aptos', sans-serif; /* Base font for entire site */
+    font-size: 11pt; /* Base font size */
+}
+
+/* I Set the base body styles */
+body {
+    background-color: #fff; /* Light background for readability */
+    color: #333; /* Neutral text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* ================================
+   2. Typography Styles
+   ================================ */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 0.5px; /* Slight spacing for clarity */
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem; /* Use rem for scalability */
+    margin-bottom: 1rem;
+}
+
+/* ================================
+   3. Layout Structure (Desktop First)
+   ================================ */
+
+/* Main container layout */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    gap: 1.5rem; /* Space between sections */
+}
+
+/* Hero section layout using Flexbox */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================================
+   4. Visual Styles
+   ================================ */
+
+/* Buttons */
+button {
+    background-color: #d35400;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #8d5524;
+}
+
+button:focus {
+    outline: 2px solid #8d5524;
+    outline-offset: 2px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Pet cards */
+.pet-card {
+    background-color: #f9e4bc;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pet-card:hover,
+.pet-card:focus {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    outline: none;
+}
+
+/* ================================
+   5. Responsive Design
+   ================================ */
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+    main {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .pet-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Scaled down for mobile */
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+/* ================================
+   6. Responsive Images
+   ================================ */
+
+/* Example for responsive image using srcset */
+img.responsive {
+    width: 100%;
+    height: auto;
+}
+
+/* ================================
+   7. Forms
+   ================================ */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+input, textarea, select {
+    padding: 0.5rem;
+    border: 1px solid #8d5524;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #d35400;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(211, 84, 0, 0.3);
+}
+
+/* ================================
+   8. Footer
+   ================================ */
+
+footer {
+    background-color: #d35400;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 8px;
+    animation: zoomIn 0.4s;
+}
+.lightbox.active { display: flex; }
+@keyframes zoomIn { from {transform: scale(0.5);} to {transform: scale(1);} }
+
+/* Smooth fade-in animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* Pet gallery grid */
+.pet-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Interactive map */
+#interactive-map {
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}

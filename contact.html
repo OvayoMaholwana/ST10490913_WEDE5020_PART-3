@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Paws for a Cause in Uitenhage. Send us a message or visit our animal shelter.">
+    <meta name="keywords" content="contact animal shelter, Uitenhage, pet rescue, volunteer, sponsor">
+    <meta name="robots" content="index, follow">
+    <title>Paws for a Cause - Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aptos&display=swap" rel="stylesheet">
+
+    <!-- Leaflet CSS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #interactive-map { height: 500px; width: 100%; margin-top: 2rem; border-radius: 12px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt a Pet</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="fade-in">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Whether you have a question, want to volunteer, or need help with a rescued animal, we're here.</p>
+
+            <form id="contact-form" class="fade-in">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required minlength="2">
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9+\-\s()]{10,}">
+
+                <label for="messagetype">Type of Message *</label>
+                <select id="messagetype" name="messagetype" required>
+                    <option value="">-- Select --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="adoption">Adoption Question</option>
+                    <option value="volunteer">Volunteer Application</option>
+                    <option value="found">Found a Stray Animal</option>
+                    <option value="donation">Donation/Sponsorship</option>
+                </select>
+
+                <label for="message">Your Message *</label>
+                <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <h2>Visit Our Shelter</h2>
+            <p><strong>Address:</strong> 123 Main Street, Uitenhage, Eastern Cape, South Africa</p>
+            <p><strong>Phone:</strong> +27 41 922 1111 | <strong>Email:</strong> info@pawsforacause.org.za</p>
+            <p><strong>Hours:</strong> Mon–Sat: 9am–4pm | Sunday: 10am–2pm</p>
+
+            <!-- Interactive Leaflet Map -->
+            <div id="interactive-map"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Paws for a Cause. All rights reserved. <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Initialize interactive map centered on Uitenhage
+        const map = L.map('interactive-map').setView([-33.7669, 25.4054], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        L.marker([-33.7669, 25.4054]).addTo(map)
+            .bindPopup('<strong>Paws for a Cause Shelter</strong><br>123 Main Street, Uitenhage<br><em>We are here!</em>')
+            .openPopup();
+    </script>
+</body>
+</html>

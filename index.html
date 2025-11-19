@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Set character encoding to UTF-8 for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Ensure responsive design for various screen sizes -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO: Meta description for search engines -->
+    <meta name="description" content="Paws for a Cause rescues, rehabilitates, and rehomes stray and abandoned animals in Uitenhage.">
+    <!-- SEO: Meta keywords for better discoverability -->
+    <meta name="keywords" content="animal rescue, pet adoption, Uitenhage, donate, stray animals">
+    <!-- Page title for the homepage -->
+    <title>Paws for a Cause - Home</title>
+    <!-- Favicon for branding -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Link to external CSS for consistent styling (ensure file exists) -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Import Aptos font from Google Fonts for typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Aptos&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section containing navigation -->
+    <header>
+        <!-- Navigation menu with ARIA attributes for accessibility -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="adopt.html">Adopt a Pet</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the homepage -->
+    <main>
+        <!-- Hero section with improved accessibility and performance -->
+        <section class="hero" style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: wrap; text-align: center; padding: 20px;">
+            <!-- Image of paws with lazy loading and fallback -->
+            <img src="images/paws.jpg" alt="Paws icon representing animal rescue" style="width: 45%; height: auto;" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Paws+Image+Not+Found';">
+            <!-- Image of shelter with lazy loading and fallback -->
+            <img src="images/shelter.jpg" alt="Animal shelter in Uitenhage" style="width: 45%; height: auto;" loading="lazy" onerror="this.src='https://via.placeholder.com/300?text=Shelter+Image+Not+Found';">
+            <!-- Main heading with semantic role -->
+            <h1 role="heading" aria-level="1">Welcome to Paws for a Cause</h1>
+            <!-- Brief description of the organization’s mission -->
+            <p>Rescuing, rehabilitating, and rehoming stray and abandoned animals in Uitenhage.</p>
+            <!-- Call-to-action buttons with accessible labels -->
+            <button onclick="window.location.href='donate.html'" aria-label="Donate to support animal rescue">Donate Now</button>
+            <button onclick="window.location.href='adopt.html'" aria-label="Adopt a pet from our shelter">Adopt a Pet</button>
+        </section>
+    </main>
+
+    <!-- Footer with copyright and contact link -->
+    <footer>
+        <p>&copy; 2025 Paws for a Cause. All rights reserved. <a href="contact.html" aria-label="Contact Paws for a Cause">Contact Us</a></p>
+    </footer>
+
+    <!-- External JavaScript file (ensure it exists or remove if unused) -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
